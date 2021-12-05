@@ -1,6 +1,8 @@
 <?php
 
 include_once('../src/database/database.php');
+include_once('../src/helper/helper.php');
+
 
 session_start();
 
@@ -97,7 +99,7 @@ $result = $conn->query($sql);
                                     <td><?php echo $row['name'] ?></td>
                                     <td><?php echo $row['type'] ?></td>
                                     <td>
-                                        <img src="/public/uploads/<?php echo $row['photo'] ?>" width="120" alt="">
+                                        <img src="<?php echo getBaseUrl() ?>/uploads/<?php echo $row['photo'] ?>" width="120" alt="">
                                     </td>
                                     <td><?php echo $row['created_at'] ?></td>
                                     <td style="width: 30rem;">

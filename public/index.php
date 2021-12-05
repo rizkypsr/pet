@@ -1,6 +1,7 @@
 <?php
 
 include_once('../src/database/database.php');
+include_once('../src/helper/helper.php');
 
 session_start();
 
@@ -43,7 +44,7 @@ $transactions = $results->num_rows;
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f9f1ed;">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="/public/images/logo.jpg" alt="" width="50" class="d-inline-block align-text-top">
+                <img src="<?php echo getBaseUrl() ?>images/logo.jpg" alt="" width="50" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -104,7 +105,7 @@ $transactions = $results->num_rows;
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-                <img class="mt-3" src="/public/images/giphy.gif" alt="">
+                <img class="mt-3" src="<?php echo getBaseUrl() ?>/images/giphy.gif" alt="">
             </div>
         </div>
     </main>
